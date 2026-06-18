@@ -588,3 +588,28 @@ section { padding: 64px 0; }
   }
   .session-hero h1 { font-size: 30px; }
 }
+
+/* 토론 카드 9문 */
+.discussion-cards { list-style: none; counter-reset: q; padding: 0; margin: 1.2em 0 0; }
+.discussion-cards li {
+  counter-increment: q;
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--line, #e5e0d2);
+  border-radius: 12px;
+  padding: 0.9em 1.1em 0.9em 3em;
+  margin: 0.5em 0;
+  position: relative;
+  line-height: 1.55;
+  font-size: 0.97em;
+}
+.discussion-cards li::before {
+  content: counter(q);
+  position: absolute;
+  left: 0.9em; top: 0.85em;
+  width: 1.7em; height: 1.7em;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--coral, #d2645a);
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 700; font-size: 0.85em;
+}
