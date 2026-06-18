@@ -101,43 +101,52 @@
       <audio controls preload="metadata" src="../recordings/session-01-part2c.m4a"></audio>
     </div>
 
-    <!-- 영상 -->
-    <h2>02-1. 그날의 짧은 영상</h2>
-    <p>김아라가 차를 내려주는 순간들 (5편).</p>
-    <div class="video-grid">
-      <video controls preload="metadata" poster="../photos/session-01/photo-001.jpg"><source src="../videos/session-01/video-01.mp4" type="video/mp4"></video>
-      <video controls preload="metadata" poster="../photos/session-01/photo-020.jpg"><source src="../videos/session-01/video-02.mp4" type="video/mp4"></video>
-      <video controls preload="metadata" poster="../photos/session-01/photo-040.jpg"><source src="../videos/session-01/video-03.mp4" type="video/mp4"></video>
-      <video controls preload="metadata" poster="../photos/session-01/photo-060.jpg"><source src="../videos/session-01/video-04.mp4" type="video/mp4"></video>
-      <video controls preload="metadata" poster="../photos/session-01/photo-080.jpg"><source src="../videos/session-01/video-05.mp4" type="video/mp4"></video>
+    <!-- 그날의 사진 -->
+    <h2>02-1. 그날의 사진</h2>
+    <p>김아라가 차려준 차자리의 한 컷씩.</p>
+    <div class="photo-pair">
+      <figure>
+        <img src="../photos/session-01/session-01-tea-lotus.jpg" alt="연꽃차가 우러나는 순간" loading="lazy">
+        <figcaption>연꽃차가 우러나는 순간 — 마지막 잔.</figcaption>
+      </figure>
+      <figure>
+        <img src="../photos/session-01/session-01-tea-setup.jpg" alt="다구와 다과" loading="lazy">
+        <figcaption>다구·다과·체리 — 자리를 채운 작은 정성들.</figcaption>
+      </figure>
     </div>
 
-    <!-- 갤러리 -->
-    <h2>02-2. 그날의 사진</h2>
-    <p>김아라의 차자리, 100장의 기록.</p>
-    <div class="gallery" id="gallery-session-01"></div>
-    <script>
-      (function(){
-        var grid = document.getElementById('gallery-session-01');
-        if (!grid) return;
-        for (var i = 1; i <= 100; i++) {
-          var n = String(i).padStart(3, '0');
-          var a = document.createElement('a');
-          a.href = '../photos/session-01/photo-' + n + '.jpg';
-          a.target = '_blank';
-          a.rel = 'noopener';
-          var img = document.createElement('img');
-          img.src = a.href;
-          img.alt = '엄마들의 시간 1회 - 사진 ' + i;
-          img.loading = 'lazy';
-          a.appendChild(img);
-          grid.appendChild(a);
-        }
-      })();
-    </script>
+    <!-- 함께 본 유튜브 영상 -->
+    <h2>03. 함께 본 유튜브 영상</h2>
+    <p>모임 전 미리 보고 모였던 두 편. 자막 켜고 보기를 권장해요.</p>
+    <div class="video-links">
+      <a class="yt-card" href="https://www.youtube.com/watch?v=d95J8yzvjbQ" target="_blank" rel="noopener">
+        <div class="yt-thumb">
+          <img src="https://i.ytimg.com/vi/d95J8yzvjbQ/hqdefault.jpg" alt="The Thinking Game">
+          <span class="yt-play">▶</span>
+          <span class="yt-time">1h 23m</span>
+        </div>
+        <div class="yt-meta">
+          <div class="yt-label">DOCUMENTARY</div>
+          <h4>The Thinking Game</h4>
+          <p>데미스 하사비스 · 구글 딥마인드 · 알파폴드까지의 5년. 2024 Tribeca Film Festival 공식 선정.</p>
+        </div>
+      </a>
+      <a class="yt-card" href="https://www.youtube.com/watch?v=0KDosjF0iYM" target="_blank" rel="noopener">
+        <div class="yt-thumb">
+          <img src="https://i.ytimg.com/vi/0KDosjF0iYM/hqdefault.jpg" alt="AI 특이점 5년 안에">
+          <span class="yt-play">▶</span>
+          <span class="yt-time">46m</span>
+        </div>
+        <div class="yt-meta">
+          <div class="yt-label">TALK · EBS 취미는 과학</div>
+          <h4>AI 특이점, 5년 안에 온다고?</h4>
+          <p>박태웅 한빛미디어 의장이 풀어주는 다가올 5년의 진짜 이야기. 데프콘·이대한·항성·최정모와 함께.</p>
+        </div>
+      </a>
+    </div>
 
     <!-- 다큐 보고 받은 인상 -->
-    <h2>03. 다큐 두 편을 보고 받은 인상</h2>
+    <h2>04. 다큐 두 편을 보고 받은 인상</h2>
 
     <h3>🧬 알파폴드 — 그냥 공유해버린 사람의 단단함</h3>
     <blockquote>
@@ -176,7 +185,7 @@
     </p>
 
     <!-- 핵심 통찰 -->
-    <h2>04. 함께 도달한 통찰 두 개</h2>
+    <h2>05. 함께 도달한 통찰 두 개</h2>
 
     <h3>① 데미스 하사비스 = AI에게 실패 사례를 만들어준 사람</h3>
     <blockquote class="attrib">
@@ -218,7 +227,7 @@
     </p>
 
     <!-- 차 -->
-    <h2>05. 김아라가 내려준 4잔의 차</h2>
+    <h2>06. 김아라가 내려준 4잔의 차</h2>
     <p>
       향기 · 탐색 · 확장 · 회고 — 네 흐름에 맞춰 준비된 네 잔의 차였어요.
     </p>
@@ -267,7 +276,7 @@
     </ul>
 
     <!-- 엄마와 아이 -->
-    <h2>06. 가장 따뜻했던 대화 — 엄마, 아이, 그리고 새벽</h2>
+    <h2>07. 가장 따뜻했던 대화 — 엄마, 아이, 그리고 새벽</h2>
 
     <h3>카오썸 대표 어머님의 새벽 2시간</h3>
     <p>
@@ -304,7 +313,7 @@
     </p>
 
     <!-- 노트북 LM -->
-    <h2>07. 노트북LM 시도 (박유니)</h2>
+    <h2>08. 노트북LM 시도 (박유니)</h2>
     <p>
       우리가 본 영상 두 개를 노트북LM에 넣었더니:
     </p>
@@ -318,7 +327,7 @@
     </p>
 
     <!-- 시대 변화 -->
-    <h2>08. 우리가 본 시대의 변화</h2>
+    <h2>09. 우리가 본 시대의 변화</h2>
     <ul>
       <li>1층 회사에 <strong>말차 라떼 만드는 로봇</strong> 들어오자 한 사람이 해체됨</li>
       <li>휴게소마다 늘어나는 <strong>로봇 카페 · 솜사탕 로봇</strong></li>
@@ -327,7 +336,7 @@
     </ul>
 
     <!-- 함께 생각을 나눠볼까요 -->
-    <h2>09. 함께 생각을 나눠볼까요? — 김아라의 토론 카드 9문</h2>
+    <h2>10. 함께 생각을 나눠볼까요? — 김아라의 토론 카드 9문</h2>
     <p>
       카오썸 테이블 위에 놓여 있던 김아라의 카드. 아홉 개의 질문을 따라
       이야기가 흘렀어요.
@@ -350,7 +359,7 @@
     </ol>
 
     <!-- 자료 -->
-    <h2>10. 함께 본 자료들</h2>
+    <h2>11. 함께 본 자료들</h2>
     <p>모임에서 사용한 PDF 4종 — 받아서 가족과 함께 보세요.</p>
 
     <div class="pdf-grid">
@@ -377,7 +386,7 @@
     </div>
 
     <!-- 호스트의 가장 기뻤던 순간 -->
-    <h2>11. 운영자(박지영)가 가장 기뻤던 한 마디</h2>
+    <h2>12. 운영자(박지영)가 가장 기뻤던 한 마디</h2>
     <blockquote class="attrib">
       이 자리가 찐입니다.
       <span class="who">— 처음 참여한 분</span>
@@ -388,7 +397,7 @@
     </blockquote>
 
     <!-- 다음 자리를 위한 메모 -->
-    <h2>12. 다음 자리를 위한 메모</h2>
+    <h2>13. 다음 자리를 위한 메모</h2>
     <ul>
       <li>다음 모임 알림은 DM으로 <strong>"엄마만의 시간 알림"</strong> 보내달라 안내</li>
       <li>다음 찻자리는 아직 예정 없음 · 일정 잡히면 인스타로 공지</li>
