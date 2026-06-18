@@ -767,3 +767,42 @@ section { padding: 64px 0; }
     grid-template-columns: 1fr;
   }
 }
+
+/* 세션 내 함께한 분들 (session 페이지에서) */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.8em;
+  margin: 1.2em 0 2em;
+}
+.people-grid .person {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1em 1.1em 1.1em;
+  position: relative;
+}
+.people-grid .person .p-name {
+  font-size: 1.05em;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+.people-grid .person .p-tag {
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--coral);
+  margin: 0.3em 0 0.6em;
+  text-transform: uppercase;
+}
+.people-grid .person .p-nick {
+  font-size: 0.82em;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.people-grid .person .p-nick em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--text);
+}
