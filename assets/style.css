@@ -38,10 +38,22 @@ body {
 
 /* === 상단 네이비 헤더 === */
 .site-header {
-  background: var(--navy);
+  background:
+    linear-gradient(135deg, rgba(31, 42, 68, 0.84) 0%, rgba(21, 32, 58, 0.92) 100%),
+    url("lotus-hero.jpg") center / cover no-repeat;
+  background-color: var(--navy);
   color: white;
   padding: 56px 0 80px;
   position: relative;
+  overflow: hidden;
+}
+.site-header > .container { position: relative; z-index: 1; }
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 75% 35%, rgba(255,255,255,0.06) 0%, transparent 55%);
+  pointer-events: none;
 }
 .site-header::after {
   content: "";
@@ -50,6 +62,7 @@ body {
   bottom: 0; left: 0; right: 0;
   height: 6px;
   background: var(--coral);
+  z-index: 1;
 }
 .site-header .top-bar {
   display: flex;
@@ -67,10 +80,14 @@ body {
   text-decoration: none;
 }
 .site-header .logo-link img {
-  width: 90px;
+  width: 100px;
   height: auto;
-  filter: brightness(0) invert(1);  /* 어두운 헤더 위에서 흰 실루엣으로 */
-  opacity: 0.95;
+  /* filter 제거 — 컬러 일러스트 원본 그대로 노출 */
+  /* 연꽃 배경 위에서 가독성 위해 살짝 부드러운 백드롭 */
+  background: rgba(255, 252, 245, 0.92);
+  padding: 8px 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
 }
 .site-header h1 {
   font-size: 56px;
