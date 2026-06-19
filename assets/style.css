@@ -80,14 +80,9 @@ body {
   text-decoration: none;
 }
 .site-header .logo-link img {
-  width: 100px;
+  width: 110px;
   height: auto;
-  /* filter 제거 — 컬러 일러스트 원본 그대로 노출 */
-  /* 연꽃 배경 위에서 가독성 위해 살짝 부드러운 백드롭 */
-  background: rgba(255, 252, 245, 0.92);
-  padding: 8px 12px;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  /* 박스·패딩·필터 모두 제거 — 투명 PNG 그대로 */
 }
 .site-header h1 {
   font-size: 56px;
