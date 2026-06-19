@@ -806,3 +806,70 @@ section { padding: 64px 0; }
   font-weight: 600;
   color: var(--text);
 }
+
+/* 외부 도구 링크 카드 */
+.ext-tool {
+  margin: 1.4em 0 0.8em;
+}
+.ext-link {
+  display: grid;
+  grid-template-columns: 56px 1fr 32px;
+  gap: 18px;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  background: var(--card, #fff);
+  border: 1px solid var(--line, #e2ddd0);
+  border-left: 4px solid var(--sky, #4A90D9);
+  border-radius: 12px;
+  padding: 18px 22px;
+  transition: transform .15s, box-shadow .2s, border-color .2s;
+}
+.ext-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(31,42,68,0.10);
+  border-color: var(--sky);
+}
+.ext-icon {
+  font-size: 32px;
+  text-align: center;
+  line-height: 1;
+}
+.ext-body { line-height: 1.55; }
+.ext-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--sky, #4A90D9);
+  margin-bottom: 4px;
+}
+.ext-title {
+  font-size: 1.05em;
+  font-weight: 800;
+  color: var(--navy, #1F2A44);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.ext-desc {
+  font-size: 0.88em;
+  color: var(--muted, #6E7280);
+}
+.ext-arrow {
+  font-size: 24px;
+  color: var(--sky, #4A90D9);
+  font-weight: 700;
+  text-align: center;
+}
+.ext-note {
+  font-size: 0.85em;
+  color: var(--muted, #6E7280);
+  margin: 0.4em 0 0 0;
+}
+@media (max-width: 540px) {
+  .ext-link {
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
+  }
+  .ext-link .ext-arrow { display: none; }
+  .ext-icon { font-size: 26px; }
+}
